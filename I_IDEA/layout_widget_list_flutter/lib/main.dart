@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo Awal',
+      title: 'Flutter Demo Dasar',
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Belajar Dasar Flutter'),
-        backgroundColor: Colors.transparent,
+        title: const Text('Basic Flutter'),
+        backgroundColor: Colors.blue,
         elevation: 10,
         leading: const Icon(Icons.settings),
         actions: [
@@ -54,9 +54,9 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: 100,
         width: 200,
-        color: Colors.orange,
+        color: Colors.red,
       ),
     );
   }
 }
-// Bahri. Menit 21
+// Bahri. Menit 19

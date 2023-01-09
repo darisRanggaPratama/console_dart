@@ -38,18 +38,26 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.red,
         elevation: 10,
         leading: const Icon(Icons.settings_applications),
-        actions: const [
-          Icon(Icons.login),
-          SizedBox(
+        actions: [
+          InkWell(
+            onTap: () {},
+            child: const Icon(Icons.login),
+          ),
+          const SizedBox(
             width: 8,
           ),
-          Icon(Icons.battery_alert),
-          SizedBox(
+          const Icon(Icons.battery_alert),
+          const SizedBox(
             width: 16,
           )
         ],
       ),
+      body: Container(
+        height: 100,
+        width: 200,
+        color: Colors.purple,
+      ),
     );
   }
 }
-// Bahri. Menit 19
+// Bahri. Menit 21
