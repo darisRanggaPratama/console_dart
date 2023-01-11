@@ -32,31 +32,47 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Basic Flutter'),
-        backgroundColor: Colors.blue,
-        elevation: 10,
-        leading: const Icon(Icons.settings),
-        actions: [
-          InkWell(
-            onTap: () {},
-            child: const Icon(Icons.logout),
+        appBar: AppBar(
+          title: const Text('Basic Flutter'),
+          backgroundColor: Colors.blue,
+          elevation: 10,
+          leading: const Icon(Icons.settings),
+          actions: [
+            InkWell(
+              onTap: () {},
+              child: const Icon(Icons.logout),
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+            const Icon(Icons.person),
+            const SizedBox(
+              width: 8,
+            )
+          ],
+        ),
+        body: Column(children: [
+          Container(
+            margin: const EdgeInsets.all(16),
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.blue, width: 5),
+                borderRadius: BorderRadius.circular(100),
+                image: const DecorationImage(
+                    image: AssetImage('assets/images/ninja-girl.png'))),
+            child: const Padding(
+              padding: EdgeInsets.all(20),
+              child: Text('Ninja Girl'),
+            ),
           ),
-          const SizedBox(
-            width: 8,
-          ),
-          const Icon(Icons.person),
-          const SizedBox(
-            width: 8,
+          const CircleAvatar(
+            radius: 50,
+            backgroundImage: NetworkImage('https://ih1.redbubble.net/image.3702497069.1929/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'),
           )
-        ],
-      ),
-      body: Container(
-        height: 100,
-        width: 200,
-        color: Colors.red,
-      ),
+        ])
     );
   }
 }
-// Bahri. Menit 19
+// Bahri. Menit 34
