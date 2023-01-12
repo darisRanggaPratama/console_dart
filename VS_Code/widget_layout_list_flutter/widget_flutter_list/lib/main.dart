@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        body: Column(
+        body: ListView(
           children: [
           Container(
             margin: const EdgeInsets.all(16),
@@ -76,9 +76,12 @@ class _HomePageState extends State<HomePage> {
             child: CircleAvatar(
             radius: 95,
             backgroundImage: AssetImage('assets/images/ninja-cat.png')
-          )),
+          )
+          ),
+          Image.asset('assets/icons/ninja.png')
         ])
+        
         );
   }
 }
-// Bahri. Menit 34
+// Bahri. Menit 36

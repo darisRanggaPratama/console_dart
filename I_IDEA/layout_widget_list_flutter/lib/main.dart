@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        body: Column(children: [
+        body: ListView(children: [
           Container(
             margin: const EdgeInsets.all(16),
             height: 200,
@@ -69,10 +69,12 @@ class _HomePageState extends State<HomePage> {
           ),
           const CircleAvatar(
             radius: 50,
-            backgroundImage: NetworkImage('https://ih1.redbubble.net/image.3702497069.1929/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'),
-          )
+            backgroundImage: NetworkImage(
+                'https://ih1.redbubble.net/image.3702497069.1929/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'),
+          ),
+          Image.asset('assets/icons/ninja.png')
         ])
     );
   }
 }
-// Bahri. Menit 34
+// Bahri. Menit 36

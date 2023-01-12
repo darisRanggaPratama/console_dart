@@ -51,7 +51,9 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        body: Column(children: [
+        body: SingleChildScrollView(
+        child: Column(
+            children: [
           Container(
             margin: const EdgeInsets.all(16),
             padding: const EdgeInsets.all(12),
@@ -72,9 +74,13 @@ class _HomePageState extends State<HomePage> {
             radius: 95,
             backgroundImage: NetworkImage(
                 'https://ih1.redbubble.net/image.3226983054.8312/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg'),
-          ))
-        ])
+          )
+          ),
+          Image.asset('assets/icons/cat_ninja.png')
+        ]
+        )
+        )
     );
   }
 }
-// Bahri. Menit 34
+// Bahri. Menit 36
