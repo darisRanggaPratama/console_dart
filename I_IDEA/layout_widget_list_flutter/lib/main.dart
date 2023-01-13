@@ -66,15 +66,21 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(20),
               child: Text('Ninja Girl'),
             ),
+          ), Row(children: [
+          const CircleAvatar(
+            radius: 50,
+            backgroundImage: NetworkImage(
+                'https://ih1.redbubble.net/image.3702497069.1929/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'),
           ),
           const CircleAvatar(
             radius: 50,
             backgroundImage: NetworkImage(
                 'https://ih1.redbubble.net/image.3702497069.1929/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'),
           ),
-          Image.asset('assets/icons/ninja.png')
+          Expanded(child: Image.asset('assets/icons/ninja.png'))
+    ])
         ])
     );
   }
 }
-// Bahri. Menit 36
+// Bahri. Menit 48

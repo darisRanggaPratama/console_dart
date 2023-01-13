@@ -52,36 +52,56 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        body: ListView(
-          children: [
-          Container(
-            margin: const EdgeInsets.all(16),
-            height: 100,
-            width: 200,
-            decoration: BoxDecoration(
-                color: Colors.purple,
-                border: Border.all(color: Colors.orange, width: 5),
-                borderRadius: BorderRadius.circular(20),
-                image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://i.etsystatic.com/38142327/r/il/c684a1/4248869268/il_fullxfull.4248869268_t0d2.jpg'))),
-            child: const Padding(
-              padding: EdgeInsets.all(20),
-              child: Text('Ninja'),
-            ),
-          ),
-          const CircleAvatar(
-            radius: 100,
-            backgroundColor: Colors.brown,
-            child: CircleAvatar(
-            radius: 95,
-            backgroundImage: AssetImage('assets/images/ninja-cat.png')
-          )
-          ),
-          Image.asset('assets/icons/ninja.png')
-        ])
-        
-        );
+        body: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+          Column(children: [
+            Container(
+                margin: const EdgeInsets.all(16),
+                height: 100,
+                width: 200,
+                decoration: BoxDecoration(
+                    color: Colors.purple,
+                    border: Border.all(color: Colors.orange, width: 5),
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                        image: NetworkImage(
+                            'https://i.etsystatic.com/38142327/r/il/c684a1/4248869268/il_fullxfull.4248869268_t0d2.jpg'))),
+                child: const Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text('Ninja'),
+                )),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              ElevatedButton(
+                  onPressed: () {
+                    debugPrint('Clicked');
+                  },
+                  child: const Text('Click')),
+              const ElevatedButton(onPressed: null, child: Text('Click')),
+              TextButton(onPressed: () {}, child: const Text('Text Button'))
+            ]),
+            Row(children: [
+              const Flexible(
+                  flex: 1,
+                  child: CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.brown,
+                      child: CircleAvatar(
+                          radius: 95,
+                          backgroundImage:
+                              AssetImage('assets/images/ninja-cat.png')))),
+              const Flexible(
+                  flex: 1,
+                  child: CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.brown,
+                      child: CircleAvatar(
+                          radius: 95,
+                          backgroundImage:
+                              AssetImage('assets/images/ninja-cat.png')))),
+              Expanded(child: Image.asset('assets/icons/ninja.png'))
+            ])
+          ]),
+          Expanded(child: Image.asset('assets/icons/ninja.png'))
+        ]));
   }
 }
-// Bahri. Menit 36
+// Bahri. Menit 48

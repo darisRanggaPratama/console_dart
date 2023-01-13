@@ -52,35 +52,58 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: SingleChildScrollView(
-        child: Column(
-            children: [
-          Container(
-            margin: const EdgeInsets.all(16),
-            padding: const EdgeInsets.all(12),
-            height: 200,
-            width: 200,
-            decoration: BoxDecoration(
-                color: Colors.orange,
-                border: Border.all(color: Colors.red, width: 5),
-                borderRadius: BorderRadius.circular(100),
-                image: const DecorationImage(
-                    image: AssetImage('assets/images/cat-gun.png'))),
-            child: const Text('Cat Army'),
-          ),
-          const CircleAvatar(
-          radius: 100,
-          backgroundColor: Colors.blue,
-          child: CircleAvatar(
-            radius: 95,
-            backgroundImage: NetworkImage(
-                'https://ih1.redbubble.net/image.3226983054.8312/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg'),
-          )
-          ),
-          Image.asset('assets/icons/cat_ninja.png')
-        ]
-        )
+            child: Column(children: [
+              Container(
+                margin: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(12),
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                    color: Colors.orange,
+                    border: Border.all(color: Colors.red, width: 5),
+                    borderRadius: BorderRadius.circular(100),
+                    image: const DecorationImage(
+                        image: AssetImage('assets/images/cat-gun.png'))
+                ),
+                child: const Text('Cat Army'),
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                ElevatedButton(
+                    onPressed: () {
+                      debugPrint('Clicked');
+                    },
+                    child: const Text('Click')),
+                const ElevatedButton(onPressed: null, child: Text('Click')),
+                TextButton(onPressed: () {}, child: const Text('Text Button'))
+              ]),
+              SizedBox(
+                  height: 200,
+                  child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        const CircleAvatar(
+                            radius: 100,
+                            backgroundColor: Colors.blue,
+                            child: CircleAvatar(
+                              radius: 95,
+                              backgroundImage: NetworkImage(
+                                  'https://ih1.redbubble.net/image.3226983054.8312/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg'),
+                            )),
+                        const CircleAvatar(
+                            radius: 100,
+                            backgroundColor: Colors.blue,
+                            child: CircleAvatar(
+                              radius: 95,
+                              backgroundImage: NetworkImage(
+                                  'https://ih1.redbubble.net/image.3226983054.8312/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg'),
+                            )),
+                        Image.asset('assets/icons/cat_ninja.png')
+                      ]
+                  )
+              )
+            ])
         )
     );
   }
 }
-// Bahri. Menit 36
+// Bahri. Menit 48
